@@ -23,8 +23,7 @@
   ],
   "rules": {
     "@typescript-eslint/no-var-requires": 1,
-    "@typescript-eslint/prefer-optional-chain": 2,
-    "import/no-relative-parent-imports": "error"
+    "@typescript-eslint/prefer-optional-chain": 2
   },
   "settings": {
     "import/resolver": {
