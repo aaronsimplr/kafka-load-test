@@ -1,5 +1,5 @@
 {
-  "name": "node-typescript-boilerplate",
+  "name": "kafka-load-test",
   "version": "0.0.0",
   "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
   "engines": {
@@ -11,7 +11,7 @@
     "@types/express-jwt": "0.0.42",
     "@types/jest": "~26.0.15",
     "@types/jsonwebtoken": "~8.5.0",
-    "@types/node": "~12.12.53",
+    "@types/node": "^12.12.70",
     "@types/sinon": "~9.0.4",
     "@types/supertest": "~2.0.10",
     "@typescript-eslint/eslint-plugin": "~4.8.2",
@@ -32,11 +32,11 @@
     "supertest": "^4.0.2",
     "ts-jest": "~26.4.4",
     "tsutils": "~3.17.0",
-    "typescript": "~4.1.2"
+    "typescript": "^4.1.5"
   },
   "scripts": {
     "precommit": "npm run lint && npm run test",
-    "start": "node -r ./tsconfig-paths-bootstrap.js ./build/src/index",
+    "start": "ts-node src/index",
     "clean": "rimraf coverage build tmp",
     "build": "tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
@@ -52,6 +52,8 @@
   "author": "Simplr",
   "license": "Apache-2.0",
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/kafkajs": "^1.9.0",
     "dotenv": "~8.2.0",
     "express": "~4.17.1",
     "express-jwt": "~6.0.0",
@@ -61,6 +63,7 @@
     "log4js-json-layout": "~2.2.2",
     "newrelic": "~7.4.0",
     "serialize-error": "~7.0.1",
+    "ts-node": "^10.0.0",
     "tsconfig-paths": "~3.9.0",
     "tslib": "~2.0.0",
     "uuid": "~8.3.0"
